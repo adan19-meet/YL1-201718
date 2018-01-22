@@ -13,13 +13,13 @@ class Ball(Turtle):
         self.color(color)
     def move(self,screen_width,screen_hieght):
         current_x = self.xcor()
-        new_x = current_x + self.dx()
+        new_x = current_x + self.dx
         current_y = self.ycor()
-        new_y = current_y + self.dy()
-        right_side_ball = new_x + self.r()
-        left_side_ball = new_x - self.r()
-        up_side_ball = new_y + self.r()
-        down_side_ball = new_y - self.r()
+        new_y = current_y + self.dy
+        right_side_ball = new_x + self.r
+        left_side_ball = new_x - self.r
+        up_side_ball = new_y + self.r
+        down_side_ball = new_y - self.r
         self.goto(new_x,new_y)
         if right_side_ball > screen_width:
             self.goto(new_x - self.dx,new_y)
@@ -29,3 +29,4 @@ class Ball(Turtle):
             self.goto(new_x , new_y - self.dy)
         if down_side_ball < - screen_hieght:
             self.goto(new_x , new_y + self.dy)
+     
